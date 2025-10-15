@@ -8,24 +8,24 @@ The project is structured to allow for the generation of synthetic datasets and 
 
 ## Repository Structure
 
-```
-.
-├── Baseline/
-│   ├── 124-40/
-│   ├── 248-80/
-│   └── BCPSO Code.ipynb
-├── RTSGA-HC/
-│   ├── 124-40/
-│   ├── 248-80/
-│   └── RTSGA-HC Code.ipynb
-├── RTSGA/
-│   ├── 124-40/
-│   ├── 248-80/
-│   └── RTSGA Code.ipynb
-├── Random/
-│   ├── 124-40/
-│   ├── 248-80/
-│   └── Random Selection Code.ipynb
+```.
+├── CodeFiles/
+│   ├── Baseline/
+│   │   ├── 124-40/
+│   │   ├── 248-80/
+│   │   └── BCPSO Code.ipynb
+│   ├── RTSGA-HC/
+│   │   ├── 124-40/
+│   │   ├── 248-80/
+│   │   └── RTSGA-HC Code.ipynb
+│   ├── RTSGA/
+│   │   ├── 124-40/
+│   │   ├── 248-80/
+│   │   └── RTSGA Code.ipynb
+│   └── Random/
+│       ├── 124-40/
+│       ├── 248-80/
+│       └── Random Selection Code.ipynb
 ├── Dataset/
 │   ├── mapped-dataset-124-40-defaultJS.xlsx
 │   └── mapped-dataset-248-80-defaultJS.xlsx
