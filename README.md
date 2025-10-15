@@ -8,7 +8,8 @@ The project is structured to allow for the generation of synthetic datasets and 
 
 ## Repository Structure
 
-```.
+```
+.
 ├── CodeFiles/
 │   ├── Baseline/
 │   │   ├── 124-40/
@@ -30,6 +31,8 @@ The project is structured to allow for the generation of synthetic datasets and 
 │   ├── mapped-dataset-124-40-defaultJS.xlsx
 │   └── mapped-dataset-248-80-defaultJS.xlsx
 └── Combined Visualization & Stat Reports/
+    ├── 124-40/
+    ├── 248-80/
     ├── final plotting code.ipynb
     └── statistical report code.ipynb
 ```
