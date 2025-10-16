@@ -73,7 +73,7 @@ This script establishes a naive baseline to gauge the effectiveness of the intel
 2. **Run the Script**: Execute all cells.
 3. **Provide Input**: When prompted, upload the same dataset file you used for the BCPSO run.
 4. **Get Output**: The script will generate an Excel report named `Random_Selection_Report_*.xlsx`.
-5. **Organize Output**: Move this report into the appropriate output directory (e.g., `Random/248-80/`) or compare with the existing `RandomSelection Report.xlsx` file.
+
 
 
 ### Step 3: Run the RTS-GA Experiments
@@ -85,8 +85,7 @@ This notebook is designed to run multiple variations of the Genetic Algorithm.
 3. **Run the Script**: Execute all cells.
 4. **Provide Input**: When prompted, upload the same dataset file used previously. The script will run 30 times for each budget level and may take a significant amount of time. It will save its progress to a `.csv` file after each budget is completed.
 5. **Get Output**: At the end of the run, the script will generate a final Excel report named `Comprehensive_Report_[VersionName].xlsx`.
-6. **Organize Output**: Move this report into the appropriate output directory (e.g., `RTSGA/248-80/`).
-7. **Repeat**: Repeat this process for each of the GA variations you wish to test.
+6. **Repeat**: Repeat this process for each of the GA variations you wish to test.
 
 ### Step 4: Run the RTS-GA-HC (Hybrid) Experiments
 
@@ -95,8 +94,7 @@ This notebook follows the exact same procedure as the standard RTS-GA.
 1. **Open the Notebook**: Navigate to `RTSGA-HC/` and open `RTSGA-HC Code.ipynb`.
 2. **Select a Version, Run, and Provide Input**: Follow the same steps as described in Step 3.
 3. **Get Output**: The script will generate a `Comprehensive_Report_[VersionName].xlsx` file.
-4. **Organize Output**: Move this report into the appropriate output directory (e.g., `RTSGA-HC/248-80/`).
-5. **Repeat**: Repeat the process for all desired GA-HC variations.
+4. **Repeat**: Repeat the process for all desired GA-HC variations.
 
 ---
 
