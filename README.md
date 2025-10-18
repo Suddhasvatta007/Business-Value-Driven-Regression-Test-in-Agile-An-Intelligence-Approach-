@@ -1,6 +1,6 @@
 # Business-Value-Driven Regression Test in Agile: An Intelligence Approach
 
-This repository contains the code and datasets for a research project comparing four different algorithms for the constrained test case selection problem: a baseline Binary Constrained Particle Swarm Optimization (BCPSO), a Requirement-centric Genetic Algorithm (RTSGA), a hybrid GA with Hill Climbing (RTSGA-HC), and a purely Random Selector (RAND).
+This repository contains the code and datasets for a research project comparing five different algorithms for the constrained test case selection problem: a baseline Binary Constrained Particle Swarm Optimization (BCPSO), a Greedy algorithm, a Requirement-centric Genetic Algorithm (RTSGA), a hybrid GA with Hill Climbing (RTSGA-HC), and a purely Random Selector (RAND).
 
 The project is structured to allow for the generation of synthetic datasets and the subsequent analysis of these datasets by each algorithm.
 
@@ -15,6 +15,10 @@ The project is structured to allow for the generation of synthetic datasets and 
 │   │   ├── 124-40/
 │   │   ├── 248-80/
 │   │   └── BCPSO Code.ipynb
+│   ├── Greedy/
+│   │   ├── 124-40/
+│   │   ├── 248-80/
+│   │   └── Greedy_Algorithm.ipynb
 │   ├── RTSGA-HC/
 │   │   ├── 124-40/
 │   │   ├── 248-80/
@@ -39,8 +43,9 @@ The project is structured to allow for the generation of synthetic datasets and 
 
 ### Directory Descriptions
 
-- **Algorithm Folders** (`Baseline/`, `RTSGA/`, `RTSGA-HC/`, `Random/`): Each folder contains the specific Jupyter Notebook (`.ipynb`) for that algorithm. The sub-folders (`124-40/`, `248-80/`) contain the pre-generated Excel report files:
+- **Algorithm Folders** (`Baseline/`, `Greedy/`, `RTSGA/`, `RTSGA-HC/`, `Random/`): Each folder contains the specific Jupyter Notebook (`.ipynb`) for that algorithm. The sub-folders (`124-40/`, `248-80/`) contain the pre-generated Excel report files:
   - `Baseline/124-40/` and `Baseline/248-80/`: Contains `BCPSO Results.xlsx`
+  - `Greedy/124-40/` and `Greedy/248-80/`: Contains `Greedy Results.xlsx`
   - `RTSGA/124-40/` and `RTSGA/248-80/`: Contains `RTSGA Results.xlsx`
   - `RTSGA-HC/124-40/` and `RTSGA-HC/248-80/`: Contains `RTSGA-HC Results.xlsx`
   - `Random/124-40/` and `Random/248-80/`: Contains `RandomSelection Report.xlsx`
@@ -74,9 +79,17 @@ This script establishes a naive baseline to gauge the effectiveness of the intel
 3. **Provide Input**: When prompted, upload the same dataset file you used for the BCPSO run.
 4. **Get Output**: The script will generate an Excel report named `Random_Selection_Report_*.xlsx`.
 
+### Step 3: Run the Greedy Algorithm
 
+The Greedy algorithm provides a deterministic heuristic approach for comparison with the metaheuristic methods.
 
-### Step 3: Run the RTS-GA Experiments
+1. **Open the Notebook**: Navigate to `Greedy/` and open `Greedy_Algorithm.ipynb`.
+2. **Run the Script**: Execute all cells in the notebook.
+3. **Provide Input**: When prompted, upload the same dataset file used previously.
+4. **Get Output**: The script will generate an Excel report with the greedy selection results.
+5. **Organize Output**: Save the results in the appropriate sub-folder (`Greedy/124-40/` or `Greedy/248-80/`).
+
+### Step 4: Run the RTS-GA Experiments
 
 This notebook is designed to run multiple variations of the Genetic Algorithm.
 
@@ -87,12 +100,12 @@ This notebook is designed to run multiple variations of the Genetic Algorithm.
 5. **Get Output**: At the end of the run, the script will generate a final Excel report named `Comprehensive_Report_[VersionName].xlsx`.
 6. **Repeat**: Repeat this process for each of the GA variations you wish to test.
 
-### Step 4: Run the RTS-GA-HC (Hybrid) Experiments
+### Step 5: Run the RTS-GA-HC (Hybrid) Experiments
 
 This notebook follows the exact same procedure as the standard RTS-GA.
 
 1. **Open the Notebook**: Navigate to `RTSGA-HC/` and open `RTSGA-HC Code.ipynb`.
-2. **Select a Version, Run, and Provide Input**: Follow the same steps as described in Step 3.
+2. **Select a Version, Run, and Provide Input**: Follow the same steps as described in Step 4.
 3. **Get Output**: The script will generate a `Comprehensive_Report_[VersionName].xlsx` file.
 4. **Repeat**: Repeat the process for all desired GA-HC variations.
 
@@ -105,7 +118,7 @@ The repository includes pre-generated Excel reports for all algorithms in their 
 ### Final Plotting
 
 - **File**: `final plotting code.ipynb`
-- **Purpose**: This notebook loads multiple final report files (e.g., `BCPSO Results.xlsx` from `Baseline/248-80/`, Random results, and GA versions) and generates high-quality, combined comparative plots on a single axis. This is useful for creating figures for presentations or papers.
+- **Purpose**: This notebook loads multiple final report files (e.g., `BCPSO Results.xlsx` from `Baseline/248-80/`, Greedy results, Random results, and GA versions) and generates high-quality, combined comparative plots on a single axis. This is useful for creating figures for presentations or papers.
 - **How to Run**: Open the notebook and follow the internal instructions. You can upload the existing Excel reports from the respective algorithm folders for comparison.
 
 ### Statistical Significance Reporting
@@ -114,7 +127,7 @@ The repository includes pre-generated Excel reports for all algorithms in their 
 - **Purpose**: This is the most advanced script. It performs a rigorous, publish-ready statistical analysis to determine if the performance differences between the algorithms are statistically significant.
 - **How to Run**:
   1. Open the notebook and execute the cells.
-  2. When prompted, upload the **existing Excel reports** from the algorithm folders (e.g., `BCPSO Results.xlsx` from `Baseline/248-80/`, Random results, RTS-GA results, etc.) for the four algorithms you wish to compare.
+  2. When prompted, upload the **existing Excel reports** from the algorithm folders (e.g., `BCPSO Results.xlsx` from `Baseline/248-80/`, Greedy results, Random results, RTS-GA results, etc.) for the five algorithms you wish to compare.
   3. The script will compile a single "tidy" dataset and then, for each time budget, it will:
      - Generate descriptive statistics and a box-whisker plot
      - Run a one-way ANOVA to check for overall significance
@@ -128,6 +141,7 @@ The repository includes pre-generated Excel reports for all algorithms in their 
 The repository includes pre-generated result files in each algorithm's output folders:
 
 - **BCPSO Results**: `Baseline/124-40/BCPSO Results.xlsx` and `Baseline/248-80/BCPSO Results.xlsx`
+- **Greedy Results**: `Greedy/124-40/Greedy Results.xlsx` and `Greedy/248-80/Greedy Results.xlsx`
 - **Random Selection Results**: Available in `Random/124-40/` and `Random/248-80/`
 - **RTS-GA Results**: Available in `RTSGA/124-40/` and `RTSGA/248-80/`
 - **RTS-GA-HC Results**: Available in `RTSGA-HC/124-40/` and `RTSGA-HC/248-80/`
